@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/site";
+import { WebsiteStructuredData } from "@/components/seo/WebsiteStructuredData";
 import type { Metadata } from "next";
 import { Instrument_Sans, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "/images/branding/og-image.png", // [ADD OPEN GRAPH IMAGE]
+        url: "/images/branding/og-image.png",
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} — ${siteConfig.title}`,
@@ -70,10 +71,10 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description:
       "IT professional and technology builder. Practical digital products, websites, and technology solutions.",
-    images: ["/images/branding/og-image.png"], // [ADD OPEN GRAPH IMAGE]
+    images: ["/images/branding/og-image.png"],
   },
   icons: {
-    icon: "/favicon.ico", // [ADD FAVICON]
+    icon: "/icon.svg",
   },
 };
 
@@ -85,6 +86,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable}`}>
       <body className="font-body bg-background text-foreground antialiased">
+        <WebsiteStructuredData />
         {children}
       </body>
     </html>
