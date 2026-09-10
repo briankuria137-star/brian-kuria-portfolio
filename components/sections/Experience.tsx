@@ -11,7 +11,7 @@ export function Experience() {
         <SectionHeading
           index="05"
           title="Journey"
-          description="A progression shaped by learning, practical experience, independent building, and a growing focus on professional IT and digital solutions."
+          description="From technical training to hands-on IT experience and building practical digital solutions."
         />
 
         <div className="grid gap-12 lg:grid-cols-[0.35fr_0.65fr] lg:gap-20">
@@ -21,8 +21,7 @@ export function Experience() {
             </p>
 
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              From building an IT foundation to turning technical knowledge
-              into practical products, services, and digital solutions.
+              A growing professional journey combining hands-on IT experience, independent product development, and digital solutions.
             </p>
           </div>
 
