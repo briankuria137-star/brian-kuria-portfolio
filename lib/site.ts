@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Brian Kuria is an IT and technology professional building practical digital products, websites, and technology solutions.",
   location: "Kenya",
-  url: "http://localhost:3000",
+  url: "https://brian-kuria-portfolio.vercel.app",
 
   professional: {
     headline: "IT & Tech | Digital Solutions",
