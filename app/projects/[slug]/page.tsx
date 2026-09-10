@@ -1,4 +1,6 @@
 import { ProductLabTester } from "@/components/product-lab/ProductLabTester";
+import { ProjectMediaGallery } from "@/components/projects/ProjectMediaGallery";
+import { ProjectStructuredData } from "@/components/projects/ProjectStructuredData";
 import { caseStudies } from "@/data/case-studies";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
@@ -24,6 +26,7 @@ export default async function ProjectPage({
 
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <ProjectStructuredData project={project} />
       <section className="relative overflow-hidden border-b border-border">
         <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
 
@@ -269,6 +272,11 @@ export default async function ProjectPage({
             Try the product, rate your experience, and help identify what
             should be improved next.
           </p>
+          <ProjectMediaGallery
+            items={project.gallery}
+            caption={project.mediaCaption}
+          />
+
 
           <ProductLabTester productSlug={project.slug} />
         </div>

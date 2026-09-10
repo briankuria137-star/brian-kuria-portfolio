@@ -1,3 +1,4 @@
+
 export type ProjectStatus =
   | "Active Development"
   | "Live"
@@ -9,6 +10,12 @@ export type ProjectCategory =
   | "E-commerce"
   | "Digital Ecosystem"
   | "Tool";
+
+export interface ProjectMedia {
+  src: string;
+  alt: string;
+  caption?: string;
+}
 
 export interface Project {
   /** Unique URL-safe identifier. */
@@ -39,6 +46,12 @@ export interface Project {
   /** Path under /public/images/projects. */
   image: string | null;
 
+  /** Optional visual gallery for the project case study. */
+  gallery?: ProjectMedia[];
+
+  /** Short visual caption shown beneath the project media. */
+  mediaCaption?: string;
+
   /** Public project URL, when available. */
   liveUrl?: string;
 
@@ -66,7 +79,9 @@ export const projects: Project[] = [
     role: "Founder & Developer",
     purpose:
       "Create a practical digital product that makes it easier for small businesses to showcase their products online.",
-    image: null,
+    image: "/images/projects/bkm-catalogue/dashboard.jpg",
+    gallery: [{ src: "/images/projects/bkm-catalogue/dashboard.jpg", alt: "BKM Catalogue dashboard after sign-in", caption: "Catalogue management dashboard for creating and managing a business catalogue." }, { src: "/images/projects/bkm-catalogue/public-catalogue.jpg", alt: "BKM Catalogue public customer view", caption: "Customer-facing catalogue view showing the published product presentation." }],
+    mediaCaption: "Selected views from the BKM Catalogue platform, from catalogue management to the customer-facing experience.",
     featured: true,
   },
 
@@ -83,7 +98,9 @@ export const projects: Project[] = [
     role: "Developer",
     purpose:
       "Build a practical online presence that allows a small footwear business to showcase products and reach customers digitally.",
-    image: null,
+    image: "/images/projects/yobby-kicks/storefront.jpg",
+    gallery: [{ src: "/images/projects/yobby-kicks/storefront.jpg", alt: "Yobby Kicks storefront header", caption: "Yobby Kicks storefront presentation and brand header." }, { src: "/images/projects/yobby-kicks/products.jpg", alt: "Yobby Kicks product catalogue", caption: "Product presentation showing the footwear catalogue." }],
+    mediaCaption: "Selected storefront and product views from the Yobby Kicks website.",
     liveUrl: "https://yobby-kicks.vercel.app",
     featured: true,
   },
@@ -102,6 +119,8 @@ export const projects: Project[] = [
     purpose:
       "Build a long-term digital solutions brand around practical products, websites, and technology services.",
     image: null,
+    gallery: [],
+    mediaCaption: "Selected ecosystem and product visuals will be added to the case study.",
     featured: true,
   },
 ];
