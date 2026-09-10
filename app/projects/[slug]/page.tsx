@@ -112,7 +112,7 @@ export default async function ProjectPage({
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded bg-primary px-5 py-3 text-sm font-medium text-background transition-colors hover:bg-primary-light"
               >
-                Open Live Product
+                TEST THIS PROJECT
                 <span aria-hidden="true">↗</span>
               </a>
             ) : (

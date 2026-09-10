@@ -1,14 +1,10 @@
 import type { Project } from "@/data/projects";
 
 const statusStyles: Record<Project["status"], string> = {
-  "Active Development":
-    "border-accent/30 bg-accent/5 text-accent-dark",
-  Live:
-    "border-primary/20 bg-primary/5 text-primary",
-  Concept:
-    "border-border bg-surface-muted text-muted",
-  Maintained:
-    "border-primary/20 bg-primary/5 text-primary",
+  "Active Development": "border-accent/30 bg-accent/5 text-accent-dark",
+  Live: "border-primary/20 bg-primary/5 text-primary",
+  Concept: "border-border bg-surface-muted text-muted",
+  Maintained: "border-primary/20 bg-primary/5 text-primary",
 };
 
 function isRealUrl(url?: string) {
@@ -54,11 +50,20 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.category}
           </p>
 
-          <a href={"/projects/" + project.slug} className="group/title inline-flex items-center gap-2">
-            <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight text-foreground">
+          <a
+            href={`/projects/${project.slug}`}
+            className="group/title mt-2 inline-flex items-center gap-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          >
+            <h3 className="font-display text-2xl font-semibold tracking-tight text-foreground">
               {project.title}
             </h3>
-            <span className="mt-2 text-muted transition-transform duration-150 group-hover/title:translate-x-1 group-hover/title:text-primary" aria-hidden="true">→</span>
+
+            <span
+              className="text-muted transition-transform duration-150 group-hover/title:translate-x-1 group-hover/title:text-primary"
+              aria-hidden="true"
+            >
+              →
+            </span>
           </a>
         </div>
 
@@ -113,7 +118,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary underline-offset-4 hover:underline"
+                className="rounded-sm text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 View Project →
               </a>
@@ -122,7 +127,7 @@ export function ProjectCard({ project }: { project: Project }) {
             {hasCaseStudy && (
               <a
                 href={project.caseStudyUrl}
-                className="text-primary underline-offset-4 hover:underline"
+                className="rounded-sm text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 Case Study →
               </a>
@@ -133,7 +138,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary underline-offset-4 hover:underline"
+                className="rounded-sm text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 GitHub →
               </a>

@@ -9,36 +9,36 @@ export const capabilities: Capability[] = [
     number: "01",
     title: "Website Development",
     description:
-      "Professional websites designed for businesses, brands, and individuals that need a strong digital presence.",
+      "Modern, responsive websites built for businesses, brands, and individuals that need a professional digital presence.",
   },
   {
     number: "02",
     title: "Business Digital Solutions",
     description:
-      "Practical digital solutions built around real business needs, workflows, and opportunities.",
+      "Practical digital solutions designed around business needs, workflows, customer experiences, and opportunities for growth.",
   },
   {
     number: "03",
     title: "E-commerce Solutions",
     description:
-      "Digital commerce experiences that help businesses present products and connect with customers online.",
+      "Product-focused online experiences that help businesses present their products, reach customers, and build a stronger digital presence.",
   },
   {
     number: "04",
-    title: "Online Catalogue Solutions",
+    title: "Digital Catalogue Solutions",
     description:
-      "Professional digital catalogues that make it easier for businesses to showcase products online.",
+      "Professional online catalogues that give businesses a structured and accessible way to showcase products and share them with customers.",
   },
   {
     number: "05",
-    title: "IT & Technical Solutions",
+    title: "IT & Technical Support",
     description:
-      "Practical IT solutions focused on solving technical problems and supporting reliable digital operations.",
+      "Practical technical support focused on troubleshooting, system issues, hardware and software, and reliable day-to-day IT operations.",
   },
   {
     number: "06",
     title: "Networking Solutions",
     description:
-      "Networking setup, troubleshooting, and foundational infrastructure support for practical IT environments.",
+      "Networking setup, troubleshooting, and foundational support for connected devices and practical IT environments.",
   },
 ];

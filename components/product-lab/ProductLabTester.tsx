@@ -36,7 +36,6 @@ export function ProductLabTester({
   const [wouldUse, setWouldUse] = useState<boolean | null>(null);
   const [testCompleted, setTestCompleted] = useState(false);
   const [testStartedAt, setTestStartedAt] = useState<number | null>(null);
-  const [testDuration, setTestDuration] = useState<number | null>(null);
   const [hasInteracted, setHasInteracted] = useState(false);
 
   const [reviews, setReviews] = useState<ProductReview[]>([]);
@@ -246,7 +245,7 @@ export function ProductLabTester({
                   <h5 className="mt-3 font-display text-xl font-semibold tracking-tight">Ready to explore?</h5>
                   <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">Start a focused product session. You will be taken into the real product environment, where you can explore the experience before returning here to share your feedback.</p>
                   <button type="button" onClick={startTest} className="mt-6 inline-flex items-center gap-2 bg-primary px-5 py-3 text-sm font-medium text-background transition-colors hover:bg-primary-light">
-                    Start Test
+                    Start Testing
                     <span aria-hidden="true">→</span>
                   </button>
                 </div>

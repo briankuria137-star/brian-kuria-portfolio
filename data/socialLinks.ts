@@ -23,7 +23,6 @@ export const socialLinks: SocialLink[] = [
   createLink("Instagram", siteConfig.social.instagram),
 ];
 
-
 export interface BkmProduct {
   name: string;
   description: string;
@@ -32,15 +31,23 @@ export interface BkmProduct {
 export const bkmProducts: BkmProduct[] = [
   {
     name: "BKM Websites",
-    description: "Websites built for independent businesses and brands.",
+    description:
+      "Professional websites and web experiences built for businesses, brands, individuals, and growing digital ventures.",
   },
   {
     name: "BKM Catalogue",
-    description: "A catalogue-builder platform for showcasing products online.",
+    description:
+      "A digital catalogue platform designed to help businesses organize, present, and share their products online.",
+  },
+  {
+    name: "BKM Digital Solutions",
+    description:
+      "Practical software, e-commerce, automation, and custom digital solutions built around specific business needs.",
   },
   {
     name: "BKM Guide",
-    description: "A guide product in early planning within the BKM DIGITAL ecosystem.",
+    description:
+      "An upcoming digital resource focused on helping people and businesses navigate practical technology and digital opportunities.",
   },
 ];
 

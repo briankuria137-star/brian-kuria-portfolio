@@ -15,7 +15,7 @@ export function Skills() {
           description="A practical technical foundation across software development, databases, networking, systems, and modern digital technology."
         />
 
-        <div className="grid gap-px overflow-hidden rounded border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-px overflow-hidden rounded border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((group) => (
             <article
               key={group.category}

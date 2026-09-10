@@ -40,41 +40,43 @@ export function Contact() {
             </p>
 
             <div className="mt-6 divide-y divide-border border-y border-border">
-              {contactLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target={link.href.startsWith("http") ? "_blank" : undefined}
-                  rel={
-                    link.href.startsWith("http")
-                      ? "noopener noreferrer"
-                      : undefined
-                  }
-                  className="group flex items-center justify-between gap-6 py-5"
-                >
-                  <div>
-                    <p className="font-mono text-xs text-muted">
-                      {link.label}
-                    </p>
-                    <p className="mt-1 text-sm font-medium text-foreground">
-                      {link.value}
-                    </p>
-                  </div>
+              {contactLinks.map((link) => {
+                const isExternal = link.href.startsWith("http");
 
-                  <span
-                    className="text-muted transition-transform duration-150 group-hover:translate-x-1 group-hover:text-primary"
-                    aria-hidden="true"
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                    className="group flex items-center justify-between gap-6 rounded-sm py-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   >
-                    →
-                  </span>
-                </a>
-              ))}
+                    <div>
+                      <p className="font-mono text-xs text-muted">
+                        {link.label}
+                      </p>
+
+                      <p className="mt-1 text-sm font-medium text-foreground">
+                        {link.value}
+                      </p>
+                    </div>
+
+                    <span
+                      className="text-muted transition-transform duration-150 group-hover:translate-x-1 group-hover:text-primary"
+                      aria-hidden="true"
+                    >
+                      →
+                    </span>
+                  </a>
+                );
+              })}
             </div>
 
             <div className="mt-8 border-l-2 border-accent pl-5">
               <p className="text-sm leading-relaxed text-muted">
                 Based in Kenya and open to practical projects, collaborations,
-                and opportunities across IT and digital technology.
+                technical work, and professional opportunities across IT and
+                digital technology.
               </p>
             </div>
           </div>
@@ -86,13 +88,13 @@ export function Contact() {
               </p>
 
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-foreground">
-                Tell me what you&rsquo;re building.
+                Let&rsquo;s build something useful.
               </h3>
 
               <p className="mt-2 max-w-prose text-sm leading-relaxed text-muted">
-                Share a brief description of your project, technical need, or
-                opportunity and I&rsquo;ll have the context to understand where
-                I can help.
+                Tell me about your project, technical need, collaboration, or
+                professional opportunity. A short description is enough to get
+                the conversation started.
               </p>
             </div>
 

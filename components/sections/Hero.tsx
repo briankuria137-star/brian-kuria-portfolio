@@ -1,7 +1,13 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
 
 export function Hero() {
+  const [photoError, setPhotoError] = useState(false);
+
   return (
     <section
       id="home"
@@ -49,17 +55,29 @@ export function Hero() {
 
         <div className="relative flex justify-center lg:justify-end">
           <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded border border-border bg-surface-muted">
-            <div className="absolute inset-5 border border-border/70" />
-
-            <div className="flex h-full w-full items-center justify-center">
-              <span className="px-10 text-center font-mono text-xs uppercase tracking-wider text-muted">
-                Professional portrait
-                <br />
-                <span className="mt-2 inline-block text-[10px] normal-case tracking-normal">
-                  Replace with your photo
+            {!photoError ? (
+              <Image
+                src="/images/profile/brian-kuria.jpg"
+                alt="Brian Kuria — IT & Tech | Digital Solutions"
+                fill
+                priority
+                sizes="(max-width: 1024px) 90vw, 360px"
+                className="object-cover"
+                onError={() => setPhotoError(true)}
+              />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center px-10 text-center">
+                <span className="font-mono text-xs uppercase tracking-wider text-muted">
+                  Professional portrait
+                  <br />
+                  <span className="mt-2 inline-block text-[10px] normal-case tracking-normal">
+                    Add your photo to public/images/profile/
+                  </span>
                 </span>
-              </span>
-            </div>
+              </div>
+            )}
+
+            <div className="pointer-events-none absolute inset-5 border border-white/40" />
 
             <div className="absolute inset-x-0 bottom-0 border-t border-border bg-surface/95 px-5 py-4">
               <p className="font-mono text-xs text-muted">Current direction</p>
