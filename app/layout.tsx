@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  verification: {
+    google: "6t1qdpvNlv88tc9Gyv-W1HplRuWujNyr1mhImhh0VZE",
+  },
   keywords: [
     "Brian Kuria",
     "IT professional",
