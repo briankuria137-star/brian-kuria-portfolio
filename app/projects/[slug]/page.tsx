@@ -2,6 +2,8 @@ import { ProductLabTester } from "@/components/product-lab/ProductLabTester";
 import { ProjectMediaGallery } from "@/components/projects/ProjectMediaGallery";
 import { ProjectStructuredData } from "@/components/projects/ProjectStructuredData";
 import { caseStudies } from "@/data/case-studies";
+import { siteConfig } from "@/lib/site";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 
@@ -11,6 +13,41 @@ interface ProjectPageProps {
   }>;
 }
 
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((item) => item.slug === slug);
+
+  if (!project) {
+    return {};
+  }
+
+  const title = `${project.title} — ${project.category}`;
+  const description = project.longDescription ?? project.description;
+  const url = `${siteConfig.url}/projects/${project.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      type: "article",
+      url,
+      title,
+      description,
+      siteName: siteConfig.name,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
 export default async function ProjectPage({
   params,
 }: ProjectPageProps) {
