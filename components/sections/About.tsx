@@ -11,7 +11,7 @@ export function About() {
         <SectionHeading
           index="01"
           title="About"
-          description="An IT foundation now being strengthened through real-world experience, practical projects, and continuous problem-solving."
+          description="An IT foundation strengthened through hands-on experience, practical projects, and solving real-world problems."
         />
 
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
@@ -24,9 +24,9 @@ export function About() {
 
             <p>
               My background spans software development, networking, databases,
-              systems, and technical support. I&rsquo;m currently strengthening
-              that foundation through real-world IT experience while continuing
-              to develop my technical and professional skills.
+              systems, and technical support. I&rsquo;m currently gaining
+              hands-on experience in a professional IT environment while
+              continuing to strengthen my technical and problem-solving skills.
             </p>
 
             <p>
@@ -40,8 +40,8 @@ export function About() {
             <p>
               My long-term direction is to build a strong career in IT while
               creating useful digital products and services through BKM DIGITAL.
-              The goal is simple: keep building, keep solving real problems,
-              and turn technology into something people can actually use.
+              The goal is simple: keep building, solve meaningful problems, and
+              turn technology into something people can actually use.
             </p>
           </div>
 
@@ -71,8 +71,8 @@ export function About() {
                 Direction
               </p>
               <p className="mt-3 text-sm font-medium leading-relaxed text-foreground">
-                Growing professionally in IT while developing BKM DIGITAL into
-                a long-term digital solutions ecosystem.
+                Building a professional career in IT while developing BKM
+                DIGITAL into a long-term digital solutions ecosystem.
               </p>
             </div>
           </div>

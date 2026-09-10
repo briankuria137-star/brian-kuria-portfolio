@@ -16,10 +16,10 @@ export const journey: JourneyEntry[] = [
   },
   {
     id: "industrial-attachment",
-    title: "IT Industrial Attachment",
-    period: "Current Experience",
+    title: "IT Industrial Attachment — Anexa-Tech IT Limited",
+    period: "Current",
     description:
-      "Applying technical knowledge in a real-world IT environment while gaining practical experience with professional workflows, troubleshooting, systems, and day-to-day technology operations.",
+      "Gaining hands-on experience in a professional IT environment, applying technical knowledge to real-world workflows, technology operations, troubleshooting, and day-to-day IT support.",
     current: true,
   },
   {
@@ -28,14 +28,6 @@ export const journey: JourneyEntry[] = [
     period: "Ongoing",
     description:
       "Building and deploying practical digital projects that turn technical skills into working solutions, including Yobby Kicks and BKM Catalogue.",
-    current: true,
-  },
-  {
-    id: "professional-direction",
-    title: "IT & Digital Solutions",
-    period: "Professional Direction",
-    description:
-      "Developing toward a professional career in IT while continuing to strengthen technical skills through real-world experience, project development, and problem-solving.",
     current: true,
   },
   {
